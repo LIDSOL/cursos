@@ -55,17 +55,16 @@ Cursos impartidos en el intersemestre de 2019-1 (Diciembre 2018 y Enero 2019).
 
 ## Diseño y desarrollo de prototipos con software libre
 
-- **Encargados:** Yesica Navarro, Pablo Vivar.
+- **Encargados:** Yesica Navarro, Pablo Vivar, Nohemi Elbeth,
 - **Descripcion:** Diseño y desarrollo de prototipos utilizando KiCad para el diseño de PCB y OpenScad para el diseño de piezas.
 - **Fecha:** Lunes 21 a Viernes 25 de Enero de 2019.
 - **Horario:** 10:00 a 12:30 hrs.
 - **Requisitos:** Computadora o Laptop para instalar KiCad y OpenScad.
 
+## Introudcción a LaTex
 
-## Introudcción a LaTex (Pendiente)
-
-- **Encargados:**
+- **Encargada:** Yesica Navarro
 - **Descripcion:**
-- **Fecha:**
-- **Horario:**
-- **Requisitos:**
+- **Fecha:** Lunes 21 a Viernes 25 de Enero de 2019.
+- **Horario:** 14:00 a 16:30 hrs.
+- **Requisitos:** Computadora o Laptop con navegador web y cuenta en OverLeaf (es gratis).
