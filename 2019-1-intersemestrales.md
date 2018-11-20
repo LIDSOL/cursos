@@ -32,15 +32,24 @@ Cursos impartidos en el intersemestre de 2019-1 (Diciembre 2018 y Enero 2019).
 - **Fechas:** Lunes 7 a Viernes 11 de Enero de 2019.
 - **Horario:** 12:00 a 14:00 hrs.
 - **Requisitos:** Computadora o Laptop para instalar GNU/Octave.
-	
+
+## Fundamentos de criptografía
+
+- **Ponente:** Dra. Gina Gallegos García
+- **Descripción:** Desarrollo histórico, fundamentos matemáticos, y
+  algunas aplicaciones de la criptografía
+- **Fechas:** Lunes 14 a viernes 18 de enero de 2019
+- **Horario:** 10:00 a 12:00
+- **Notas:**
+  Este cursillo está planteado como teórico (si acaso, práctico en lo
+  matemático únicamente). Podría impartirse en el laboratorio de
+  LIDSOL.
+
 ## Programación en C para GNU/Linux
 
 - **Encargado:** Emilio Cabrera
 - **Descripcion:**
-- **Fechas:**	Lunes 14 a Viernes 18 de Enero de 2019
-			**ó**
-			Lunes 21 a Viernes 25 de Enero de 2019.
-	* Es el mismo curso con dos propuestas de fechas.
+- **Fechas:**	Lunes 21 a Viernes 25 de Enero de 2019.
 - **Horario:** 10:00 a 12:00 hrs.
 - **Requisitos:** Computadora o Laptop con GNU/Linux instalado.
 
