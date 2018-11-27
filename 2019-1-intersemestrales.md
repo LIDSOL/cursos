@@ -55,7 +55,7 @@ Cursos impartidos en el intersemestre de 2019-1 (Diciembre 2018 y Enero 2019).
 
 ## Diseño y desarrollo de prototipos con software libre
 
-- **Encargados:** Yesica Navarro, Pablo Vivar, Nohemi Elbeth,
+- **Encargad@s:** Yesica Navarro, Pablo Vivar, Nohemi Elbeth,
 - **Descripcion:** Diseño y desarrollo de prototipos utilizando KiCad para el diseño de PCB y OpenScad para el diseño de piezas.
 - **Fecha:** Lunes 21 a Viernes 25 de Enero de 2019.
 - **Horario:** 10:00 a 12:30 hrs.
@@ -68,3 +68,13 @@ Cursos impartidos en el intersemestre de 2019-1 (Diciembre 2018 y Enero 2019).
 - **Fecha:** Lunes 21 a Viernes 25 de Enero de 2019.
 - **Horario:** 14:00 a 16:30 hrs.
 - **Requisitos:** Computadora o Laptop con navegador web y cuenta en OverLeaf (es gratis).
+
+
+## Métodos generales en aprendizaje máquina
+
+- **Encargad@s:** Dra. Ximena Gutierrez Vasques, Mtro. Víctor Mijangos
+- **Descripcion:** El alumno comprenderá los conceptos teóricos básicos para entender los métodos principales de aprendizaje de máquina; así como las herramientas necesarias para su implementación en diferentes tareas, principalmente de Procesamiento del Lenguaje Natural (PLN).
+- **Fecha:** Lunes 21 a Viernes 25 de Enero de 2019.
+- **Horario:** 11:00 a 14:00 hrs.
+- **Requisitos:** Conocimientos básicos de probabilidad, álgebra lineal y programación. El curso es principalmente teórico con tareas prácticas, llevar computadoras no es estrictamente necesario.
+- **Cupo máximo:** approx. ~ 20 estudiantes.
