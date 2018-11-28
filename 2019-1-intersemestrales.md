@@ -2,7 +2,7 @@
 
 Cursos impartidos en el intersemestre de 2019-1 (Diciembre 2018 y Enero 2019).
 
-## Introducción a la privacidad y anonimato en linea
+## Introducción a la privacidad y anonimato digital
 
 - **Encargados:** Paul Aguilar, Diego Barriga
 - **Descripcion:** Introducción a lo que es la privacidad y el anonimato en linea y a las herramientas que se requieren.
@@ -61,7 +61,7 @@ Cursos impartidos en el intersemestre de 2019-1 (Diciembre 2018 y Enero 2019).
 - **Horario:** 10:00 a 12:30 hrs.
 - **Requisitos:** Computadora o Laptop para instalar KiCad y OpenScad.
 
-## Introudcción a LaTex
+## Introducción a LaTex
 
 - **Encargada:** Yesica Navarro
 - **Descripcion:**
