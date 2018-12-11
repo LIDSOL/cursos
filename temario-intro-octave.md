@@ -3,20 +3,23 @@ Curso introductorio al software GNU Octave, alternativa libre a Matlab.
 Impartido en el Laboratorio de Investigación y Desarrollo de Software Libre
 
 ## Temario
-0. Presentación del curso y de LIDSOL
-1. Presentación GNU Octave
+### 0. Presentación del curso y de LIDSOL
+
+### 1. Presentación GNU Octave
   * ¿Qué es GNU Octave?
   * ¿Por qué utilizar GNU Octave?
   * ¿Cuándo utilizar GNU Octave?
-2. Instalación de GNU Octave
-3. Primeros pasos
+### 2. Instalación de GNU Octave
+
+### 3. Primeros pasos
   * Línea de comandos
   * Interfaz gráfica
   * Comandos básicos de ayuda
   * Formato de errores
   * Comandos y Funciones
   * Ejemplo: Uso de GNU Octave como calculadora
-4. Tipos de datos
+
+### 4. Tipos de datos
   * Datos primitivos
     * Númericos
     * Cadenas
@@ -25,10 +28,12 @@ Impartido en el Laboratorio de Investigación y Desarrollo de Software Libre
   * Datos definidos por el usuario
   * Tamaño de los datos
   * Ejemplo: Imágenes como matrices 
-5. Variables 
+
+### 5. Variables 
   * Variables Globales
   * Variables Persistentes
-6. Expresiones
+
+### 6. Expresiones
   * Índices
   * Llamas a funciones
   * Operadores aritméticos
@@ -38,7 +43,8 @@ Impartido en el Laboratorio de Investigación y Desarrollo de Software Libre
   * Operadores de incremento
   * Precedencia de operadores
   * Ejemplo: Operaciones simples con imágenes
-7. Sentencias de control
+
+### 7. Sentencias de control
   * Sentencia if/else
   * Sentencia switch
   * Ciclo while
@@ -48,12 +54,14 @@ Impartido en el Laboratorio de Investigación y Desarrollo de Software Libre
   * Sentencia continue
   * Sentencia try
   * Ejemplo: Red neuronal simple 
-8. Funciones
+
+### 8. Funciones
   * Definición de funciones
   * Retorno de valores
   * Lista de argumentos
   * Ejemplo: Filtros simples para imágenes 
-9. Scripts
+
+### 9. Scripts
   * Archivos de Funciones
     * Manipulación de ruta de carga
     * Subfunciones
@@ -63,7 +71,8 @@ Impartido en el Laboratorio de Investigación y Desarrollo de Software Libre
     * Formato
     * Secciones
     * Convenciones
-10. Gráficas
+
+### 10. Gráficas
   * Tipos de gráficas
   * Gráficas 2D
   * Gráficas 3D
