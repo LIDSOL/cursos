@@ -6,8 +6,8 @@ Cursos impartidos en el intersemestre de 2019-1 (Diciembre 2018 y Enero 2019).
 
 - **Encargados:** Paul Aguilar, Diego Barriga
 - **Descripcion:** Introducción a lo que es la privacidad y el anonimato en linea y a las herramientas que se requieren.
-- **Fechas:**	Lunes 10 a Viernes 14 de Diciembre de 2018.
-- **Horario:** 10:00 a 11:30 hrs.
+- **Fechas:**	Lunes 14 a Viernes 18 de Enero de 2019.
+- **Horario:** 13:00 a 14:00 hrs.
 - **Requisitos:**
 	-	Computadora o Laptop para instalar diferentes herramientas.
 	-	USB por lo menos de 4 GB.
