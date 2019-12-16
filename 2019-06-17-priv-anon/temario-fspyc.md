@@ -42,7 +42,7 @@ Enviar encuesta para que sea contestada previo al curso
 * 10 min Demo con celular
 
 ## 5. día Conclusión
-* - min Emilio thing (PENDIENTE)
+* 30 min Qué es tornado y cómo usarlo
 * 30 min Encuentas
 * 5 min Video de Chema
   * 15 min Realimentación
