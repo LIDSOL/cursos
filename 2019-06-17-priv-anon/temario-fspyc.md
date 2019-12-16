@@ -47,4 +47,9 @@ Enviar encuesta para que sea contestada previo al curso
 * 5 min Video de Chema
   * 15 min Realimentación
 
+### Referencias
+* https://haveibeenpwned.com/
+* https://monitor.firefox.com/
+* https://ssd.eff.org/en/module/creating-strong-passwords
+* https://www.derechosdigitales.org/tipo_publicacion/publicaciones/
 
