@@ -1,0 +1,152 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Autor:        Aguilar Enriquez, Paul Sebastian a.k.a. Penserbjorne
+% Autor:        @yens7
+% Autor:        Calderón Olalde, Enrique Job @ksobrenat32
+% Fecha:        05/01/2024
+% Descripción:  Plantilla base para cursos.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,11pt]{article}                 % Papel tamaño carta, texto de 11pt.
+
+\usepackage[top=2cm, bottom=2cm, left=2.2cm, right=2.2cm]{geometry} % Margenes
+\usepackage[T1]{fontenc}                              % Indicamos la codificación de las fuentes.
+\usepackage[utf8x]{inputenc}                          % Definimos la codificación.
+\usepackage{lmodern}                                  % Para poder usar acentos.
+\usepackage[spanish]{babel}                           % Usaremos idioma español.
+\usepackage{amsmath}                                  % Para formulas matemáticas.
+\usepackage{graphicx}                                 % Para imágenes.
+\usepackage{float}                                    % Para posicionar objetos.
+\usepackage{booktabs}                                 % Para formatear tablas.
+\usepackage{hyperref}                                 % Para enlaces y referencias.
+\usepackage[table]{xcolor}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Los logos tienen posiciones relativas al nombre de la escuela.
+% Cada imagen esta desplazada con respecto al texto, en este caso nombre de la universidad.
+% No se necesitan paquetes adicionales, el entorno estándar para imágenes de LaTeX puede hacerlo.
+% El truco esta en definir una imagen de tamaño cero, asi no afecta al centrar los títulos.
+\def\logoUNAM{%
+  \begin{picture}(0,0)\unitlength=1cm
+    \put (-3.5,-3) {\includegraphics[width=8em]{images/escudo-unam}}
+  \end{picture}
+}
+
+\def\logoFI{%
+  \begin{picture}(0,0)\unitlength=1cm
+    \put (0.5,-3) {\includegraphics[width=8em]{images/escudo-fi}}
+  \end{picture}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{LIDSoL}                                             % Autor del curso.
+\title{Sysadmin GNU/Linux básico}         % Titulo del curso.
+%\date{01/01/00}                                             % Fecha de entrega.
+
+\def\universidad{Universidad Nacional Autónoma de México}   % Nombre de la universidad.
+\def\facultad{Facultad de Ingeniería}                       % Nombre de la facultad.
+\def\semestre{2024-2}                                       % Semestre lectivo.
+\def\laboratorio{Laboratorio de Investigación y Desarrollo del Software Libre}               % Nombre del laboratorio.
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+  % Titulo del documento con logos.
+  \begin{center}
+    \logoUNAM {\Large \universidad} \logoFI\par
+    {\large \facultad}\par
+
+    \laboratorio\par
+    \semestre\par
+    \@author\par
+    \@date\par
+    \@title
+  \end{center}
+
+  \hrulefill\par
+
+  \pagenumbering{gobble}                              % Oculta el numero de pagina.
+  \tableofcontents                                    % Crea el indice o tabla de contenido.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \newpage
+  \pagenumbering{arabic} % Muestra el numero de pagina.
+
+  \section{Temario}
+    \begin{enumerate}
+      \item Linea de comandos [7.5 h]
+        \begin{enumerate}
+          \item Estructura de directorios en GNU/Linux [0.5 h]
+          \item Usuarios y permisos [1 h]
+          \item Comandos básicos [2 h]
+          \item Editor de texto [1 h]
+          \item Instalación de programas [1 h]
+          \item Shell [2 h]
+        \end{enumerate}
+      \item Sistema Debian GNU/Linux [12.5 h]
+        \begin{enumerate}
+          \item Systemd [1 h]
+          \item Administración de servicios [2.5 h]
+          \item Redes y Firewall [3 h]
+          \item Almacenamiento y sistemas de archivos [2 h]
+          \item Métodos de respaldo de información [2 h]
+          \item Contenedores [2 h]
+        \end{enumerate}
+    \end{enumerate}
+
+  \section{Objetivos}
+    El curso esta dirigido hacia personas con conocimientos de GNU/Linux quienes se deseen adentrar a la administración y mantenimiento de servidores.
+
+    Los alumnos obtendrán conocimientos sobre la administración de sistemas GNU/Linux para su uso como servidor.
+
+  \section{Requisitos}
+    \begin{itemize}
+      \item Conocimientos básicos de GNU/Linux.
+      \item Computadora con máquina virtual con Debian 12 (Se enviarán instrucciones).
+    \end{itemize}
+
+  \section{Metodología de enseñanza}
+    Se utiliza un sistema teórico-práctico en el cual inicialmente se imparte la parte teórica para posteriormente asignar ejercicios de reforzamiento.
+
+    Se finaliza con un proyecto para reforzar la totalidad de conocimientos adquiridos en el curso.
+
+  \section{Evaluación}
+    El curso se evalúa por medio de la asistencia (mínima del 80\%) al mismo y entrega del proyecto, siendo ambos requisitos para la obtención de constancia.
+
+  \section{Recursos}
+    \begin{itemize}
+      \item Libro 1
+    \end{itemize}
+
+  \section{Calendario}
+    \begin{center}
+      \resizebox{\textwidth}{!}{
+      \begin{tabular}{|c|c|c|c|c|c|}
+      \hline
+      & \textbf{Lunes 29 de Julio} & \textbf{Martes 30 de Julio} & \textbf{Miércoles 31 de Julio} & \textbf{Jueves 1 de Agosto} & \textbf{Viernes 2 de Agosto} \\
+      \hline
+      09:00 - 10:00 & & & & & \\
+      \hline
+      10:00 - 11:00 & \cellcolor{yellow!25}Curso & \cellcolor{yellow!25}Curso & \cellcolor{yellow!25}Curso & \cellcolor{yellow!25}Curso & \cellcolor{yellow!25}Curso \\
+      \hline
+      11:00 - 12:00 & \cellcolor{yellow!25}Curso & \cellcolor{yellow!25}Curso & \cellcolor{yellow!25}Curso & \cellcolor{yellow!25}Curso & \cellcolor{yellow!25}Curso \\
+      \hline
+      12:00 - 13:00 & \cellcolor{yellow!25}Curso & \cellcolor{yellow!25}Curso & \cellcolor{yellow!25}Curso & \cellcolor{yellow!25}Curso & \cellcolor{yellow!25}Curso \\
+      \hline
+      13:00 - 14:00 & \cellcolor{yellow!25}Curso & \cellcolor{yellow!25}Curso & \cellcolor{yellow!25}Curso & \cellcolor{yellow!25}Curso & \cellcolor{yellow!25}Curso \\
+      \hline
+      14:00 - 15:00 & & & & & \\
+      \hline
+      \end{tabular}
+      }
+    \end{center}
+
+  %\section{Retroalimentación}
+    %Incluye una sección para recopilar la retroalimentación de los estudiantes sobre el curso. Esto puede ayudarte a mejorar futuras ediciones del curso y a ajustar el contenido y la metodología de enseñanza según las necesidades y preferencias de los estudiantes.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
