@@ -109,6 +109,9 @@ estándar**.
   Puedes navegar el manual con las flechas direccionales o con los comandos de
   movimiento de `vi` (pronto se hablará sobre `vi`). Se sale con `q`.
 
+  Si no estás seguro de cómo se utiliza un comando, trata de ver si tiene una
+  página de manual y léela, te puede ahorrar una búsqueda en internet.
+
 - `pwd`: Muestra el directorio actual de trabajo, es decir, el directorio en el
   que se está ejecutando el programa. Si se ejecuta desde la terminal, muestra
   el directorio en el que se encuentra el usuario que ejecutó el comando:
@@ -260,6 +263,14 @@ estándar**.
   ```
   $ sort archivo
   ```
+
+- `tar`: Una utilidad para compresión y descompresión de datos. Suele utilizarse
+  para descomprimir los archivos comprimidos que distribuyen los desarrolladores
+  de software para instalar sus programas.
+
+- `curl`: Hace peticiones hacia alguna URL. Puede utilizarse para descargar
+  archivos desd eun servidor remoto. Para hacer esto último, se necesitan las
+  banderas `-LO`
 
 - `du`: Muestra el uso en disco de un archivo.
 
