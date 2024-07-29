@@ -65,3 +65,9 @@ Es un sistema donde todo empieza en el directorio raíz `/`, de este se desprend
 - `/boot` Contiene los archivos del kernel y lo relacionado con el arranque.
 - `/media` Un punto de montado de dispositivos que se pueden remover como memorias usb o sd.
 - `/opt` Contiene software de terceros
+
+# Actividad
+
+Visita los directorios explorados en esta clase, observa la distribución de estos y explora los archivos dentro.
+
+En caso de alguna duda, pregunta al instructor
