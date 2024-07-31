@@ -1,0 +1,21 @@
+[Unit]
+Description=Blocky is a DNS proxy and ad-blocker
+Documentation=https://github.com/0xERR0R/blocky
+After=network.target
+
+[Service]
+User=blocky
+Type=simple
+ExecStart=/usr/local/bin/blocky --config /var/lib/blocky/config.yml
+Restart=on-failure
+RestartSec=10
+SyslogIdentifier=blocky
+TimeoutStopSec=5s
+LimitNOFILE=1048576
+LimitNPROC=512
+PrivateTmp=true
+ProtectSystem=full
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+
+[Install]
+WantedBy=multi-user.target
