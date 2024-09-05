@@ -1,0 +1,55 @@
+= Uso de la plantilla
+
+== Con LaTeX
+
+En el caso de crear una presentación con LaTeX, es necesario incluir el archivo
+`+preamble.tex+`, así como _settear_ el título, autor, instituto y fecha del
+documento...
+
+[,tex]
+----
+% ...
+\input{preamble}
+
+\title[Título corto]{Título del tema que vamos a presentar}
+\author{%
+    {\textsc{Enrique Calderón, Francisco Galindo}} \newline
+    Estudiantes de Ingeniería en Computación
+}
+
+\institute{%
+    \textit{Universidad Nacional Autónoma de México}\\
+    \textit{Facultad de Ingeniería}
+}
+
+\date{Curso de SysAdmin, Semestre 2025-1} 
+
+\begin{document}
+
+% ...
+----
+
+== Con `+pandoc+`
+
+Los siguientes _metadatos_ son necesarios para la presentación:
+
+----
+---
+lang: "es"
+title: "Mi título"
+subtitle: "Subtítulo"
+author:
+    - \textsc{Nombre Apellido Apellido} \newline Rol
+institute:
+    - \textit{Universidad Nacional Autónoma de México\\ Facultad de Ingeniería}
+date: Curso de SysAdmin, Julio de 2024
+
+---
+----
+
+Para utilizar la plantilla con `+pandoc+`, es necesario agregar las opciones
+`+-t beamer+` y `+-H preamble.tex+`:
+
+----
+pandoc -t beamer -H preamble.tex pres-markdown.md  -o presentacion.pdf
+----
