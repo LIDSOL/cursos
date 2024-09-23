@@ -1,0 +1,712 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\newif\ifbibliography
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{\textbf{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+\usepackage{caption}
+% Make caption package work with longtable
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{spanish}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{charter}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usefonttheme[onlymath]{serif}
+
+\definecolor{azuloscuro}{HTML}{152139}
+\definecolor{azulclaro}{HTML}{0064FF}
+
+\setbeamerfont{subtitle}{size=\scriptsize}
+\setbeamertemplate{title page}{
+    \begin{tikzpicture}[remember picture, overlay]
+    \fill[azuloscuro] (current page.south west) rectangle (current page.north east);
+    \draw[azulclaro, line width=1ex] (current page.north west) -- (current page.north east);
+    \node[anchor=center, align=left, text width=\textwidth, inner sep=0pt, text=white, text height=2.5ex] at (current page.center) {
+        \usebeamerfont{title}
+            {\centering\inserttitle\\[1cm]}
+        \rule{\linewidth}{0.4pt}
+        \usebeamerfont{subtitle}
+            {\insertauthor\\[0.2cm]}
+            {\insertinstitute\par}
+            \rule{\linewidth}{0.4pt}\\[0.5cm]
+            {\insertdate}
+    };
+    \end{tikzpicture}
+}
+
+
+\setbeamertemplate{headline}{%
+    {\color{azulclaro}\rule{\paperwidth}{1ex}}%
+}
+
+\setbeamercolor*{titlelike}{use=structure, fg=azuloscuro, bg=white}
+
+\setbeamercolor*{footline in head/foot}{use=structure, fg=white, bg=azuloscuro}
+\setbeamertemplate{footline}{%
+    \usebeamertemplate*{headline}
+    \begin{beamercolorbox}[ht=8.25ex, dp=1ex]{footline in head/foot}
+    \hspace{1.2em}\includegraphics[height=.25in]{img/lidsol-small.png}\quad
+    \hspace{1.2em}\includegraphics[height=.25in]{img/die-small.png}\quad
+    \hspace{1.2em}\includegraphics[height=.25in]{img/fi-small.png}\quad
+    \hfill
+    \vbox{%
+      \hbox{\hspace{.65in}\fontfamily{phv}\selectfont\textbf{LIDSOL}, Semestre 2025-1}%
+      \par
+      \hbox{
+        \usebeamertemplate***{navigation symbols}
+      }
+    }
+    \hspace{.5em}
+    \end{beamercolorbox}%
+}
+
+\setbeamercolor{itemize item}{fg=azulclaro}
+\setbeamercolor{itemize subitem}{fg=azulclaro}
+\setbeamercolor{itemize subsubitem}{fg=azulclaro}
+
+\setbeamertemplate{navigation symbols}{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Conceptos fundamentales y jerarquía de directorios},
+  pdfauthor={ Estudiantes de Ingeniería en Computación},
+  pdflang={es},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Conceptos fundamentales y jerarquía de directorios}
+\author{\textsc{Hansel Tepal, Francisco Galindo} \newline Estudiantes de
+Ingeniería en Computación}
+\date{Curso de SysAdmin, 2025-1}
+\institute{\textit{Universidad Nacional Autónoma de México\\ Facultad de Ingeniería}}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}{Información del tema}
+\phantomsection\label{informaciuxf3n-del-tema}
+\begin{block}{Tiempo estimado}
+\phantomsection\label{tiempo-estimado}
+Aproximadamente 1 hora de clase, repartido en secciones de explicación
+teórica y pequeños ejercicios para reforzar el aprendizaje.
+\end{block}
+
+\begin{block}{Objetivos}
+\phantomsection\label{objetivos}
+\begin{itemize}
+\item
+  Conocer la organización canónica de los directorios en un sistema de
+  archivos tipo UNIX.
+\item
+  Que los alumnos estén acostumbrados al paradigma de UNIX donde todo es
+  un archivo.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Lo más básico de la terminal}
+\phantomsection\label{lo-muxe1s-buxe1sico-de-la-terminal}
+Abre tu programa de terminal. Ahí verás el prompt: la línea que termina
+con un \texttt{\$}.
+
+\begin{verbatim}
+[usuario@hostname ~] $ 
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Lo más básico de la terminal}
+\phantomsection\label{lo-muxe1s-buxe1sico-de-la-terminal-1}
+Una vez aparecido el prompt, puedes escribir comandos. Un comando es un
+programa que hace algo en el sistema. Este programa puede ser de
+cualquier tipo.
+
+Ejemplo: utiliza el comando \texttt{date}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{$}\NormalTok{ date}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Thur Sep  5 01:05:16 PM CST 2024
+\end{verbatim}
+\end{frame}
+
+\begin{frame}{Lo más básico de la terminal}
+\phantomsection\label{lo-muxe1s-buxe1sico-de-la-terminal-2}
+Presiona Enter y no escribas el \$, este último sólo indica al usuario
+que puede escribir un nuevo comando y se utilizará para indicar que
+cierta línea de código se trata de un comando.
+\end{frame}
+
+\begin{frame}{Archivos}
+\phantomsection\label{archivos}
+Un archivo en Linux es la manera en la que el sistema operativo almacena
+datos.
+
+Un archivo físico tiene un nombre, contenidos, un lugar en el que se
+almacena, así com ouna serie de datos administrativos sobre quién es su
+dueño y su tamaño. En el sistema operativo estos atributos también
+existen.
+\end{frame}
+
+\begin{frame}{Archivos}
+\phantomsection\label{archivos-1}
+En un archivo tu puedes guardar la secuencia de bits que a tí se te
+antoje, puedes guardar el texto de una carta, de un reporte, código
+fuente de algún programa, o una imagen.
+\end{frame}
+
+\begin{frame}[fragile]{Comandos muy comúnes para trabajar con archivos}
+\phantomsection\label{comandos-muy-comuxfanes-para-trabajar-con-archivos}
+Empecemos por un editor de texto
+
+Gracias a un editor de texto puedes\ldots{} editar texto.
+
+Utilizaremos \texttt{nano}, pues está hecho para ser fácil de usar.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{$}\NormalTok{ nano nombre{-}de{-}un{-}archivo}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{Comandos muy comúnes para trabajar con archivos}
+\phantomsection\label{comandos-muy-comuxfanes-para-trabajar-con-archivos-1}
+Una vez abierto \texttt{nano}, puedes escribir tu texto directamente.
+Tambiénuedes mover tu cursor con las flechas direccionales
+
+Para guardar tus cambios, presiona \texttt{Ctrl+O} (\texttt{\^{}O}).
+Escoge el nombre con el que se guadrará y sal con \texttt{\^{}X}.
+\end{frame}
+
+\begin{frame}[fragile]{Pequeña actividad}
+\phantomsection\label{pequeuxf1a-actividad}
+Utiliza \texttt{nano} para crear y llenar tres archivos de texto:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{chiste}: Un chiste.
+\item
+  \texttt{basura}: Cualquier cosa que quieras.
+\item
+  \texttt{tareas}: Una lista de tareas que tengas que hacer.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Comandos muy comúnes para trabajar con archivos}
+\phantomsection\label{comandos-muy-comuxfanes-para-trabajar-con-archivos-2}
+Puedes ver una lista con los nombres de los archivos de cierto lugar con
+\texttt{ls}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{$}\NormalTok{ ls}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+basura  chiste  tareas
+\end{verbatim}
+
+Puede que haya más archivos que ya existían desde antes.
+\end{frame}
+
+\begin{frame}[fragile]{Comandos muy comúnes para trabajar con archivos}
+\phantomsection\label{comandos-muy-comuxfanes-para-trabajar-con-archivos-3}
+Muchos comandos, como \texttt{ls}, tienen opciones que modifican su
+comportamiento por defecto.
+
+Las opciones se escriben después del nombre del programa a ejecutar y
+generalmente llevan un \texttt{-} por delante.
+
+¿Qué hace el siguiente comando?
+
+\begin{verbatim}
+ls -l
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Comandos muy comúnes para trabajar con archivos}
+\phantomsection\label{comandos-muy-comuxfanes-para-trabajar-con-archivos-4}
+Generalmente, puedes pasarle muchas opciones a un mismo comando, aunque
+depende ya de cada programa:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{$}\NormalTok{ ls }\AttributeTok{{-}l} \AttributeTok{{-}a}
+\end{Highlighting}
+\end{Shaded}
+
+Que es lo mismo que:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{$}\NormalTok{ ls }\AttributeTok{{-}la}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{Comandos muy comúnes para trabajar con archivos}
+\phantomsection\label{comandos-muy-comuxfanes-para-trabajar-con-archivos-5}
+A veces no es tan conveniente usar un editor para ver los contenidos de
+unarchivo, especialmente si no vas a editar nada.
+
+Puedes mostrar los contenidos de un archivo con el comando \texttt{cat}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{$}\NormalTok{ cat tareas}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Estudiar para el examen de Bases de Datos
+Comprar 1 kilo de huevo
+Blah
+Hlab
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Moviendo, borrando, copiando archivos}
+\phantomsection\label{moviendo-borrando-copiando-archivos}
+Puedes mover un archivo de un lugar a otro con \texttt{mv}. Este comando
+también se puede utilizar para ``renombrar'' un archivo:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{$}\NormalTok{ mv basura tesoro}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{Moviendo, borrando, copiando archivos}
+\phantomsection\label{moviendo-borrando-copiando-archivos-1}
+Para copiar un archivo se utiliza el comando \texttt{cp}. Todos los
+contenidos de un archivo se copian al otro
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{$}\NormalTok{ cp tesoro tesoro{-}respaldo}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{Moviendo, borrando, copiando archivos}
+\phantomsection\label{moviendo-borrando-copiando-archivos-2}
+Si quieres borrar un archivo, se utiliza el comando \texttt{rm}:
+
+\begin{verbatim}
+$ rm tesoro
+$ ls
+\end{verbatim}
+
+\begin{verbatim}
+chiste  tareas  tesoro-respaldo
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Pequeña actividad}
+\phantomsection\label{pequeuxf1a-actividad-1}
+A partir de los archivos creados en la actividad anterior, cambia sus
+nombres de manera que:
+
+\begin{itemize}
+\tightlist
+\item
+  El archivo \texttt{chiste} tenga los contenidos que antes tenía
+  \texttt{tareas}
+\item
+  El archivo \texttt{tareas} tenga los contenidos que antes tenía
+  \texttt{basura}
+\item
+  El archivo \texttt{basura} tenga los contenidos que antes tenía
+  \texttt{chiste}
+\end{itemize}
+
+Y que al final sólo estén esos archivos (además de los que ya existían
+desde el principio de la clase).
+\end{frame}
+
+\begin{frame}[fragile]{Comandos muy comúnes para trabajar con archivos}
+\phantomsection\label{comandos-muy-comuxfanes-para-trabajar-con-archivos-6}
+Generalmente, los comandos en Linux son \emph{silenciosos}, es decir, no
+envían información de salida si todo sale bien.
+
+En muchos casos, cuando sale información en pantalla es porque son
+errores:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{$}\NormalTok{ rm archivo{-}inexistente}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+rm: cannot remove 'archivo-inexistente': No such file 
+or directory
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Otros comandos}
+\phantomsection\label{otros-comandos}
+Para saber cómo se utiliza un comando, siempre es buena idea utilizar el
+comando \texttt{man} para ver un pequeño manual sobre el uso del
+comando:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{$}\NormalTok{ man ls}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{Otros comandos}
+\phantomsection\label{otros-comandos-1}
+Si quieres conocer la cantidad de líneas, palabras o caracteres en un
+archivo, utiliza \texttt{wc}:
+
+\begin{verbatim}
+wc tareas
+\end{verbatim}
+
+Con las opciones \texttt{-l}, \texttt{-c}, \texttt{-w}, puedes elegir
+qué contar.
+\end{frame}
+
+\begin{frame}[fragile]{Otros comandos}
+\phantomsection\label{otros-comandos-2}
+Un comando muy utilizado para el procesamiento simple de texto es
+\texttt{grep}. Es un programa que busca un patrón en las líneas de un
+archivo de texto.
+
+El nombre viene de un comando del antiguo editor \texttt{ed}:
+\texttt{g/regular-expression/p}.
+\end{frame}
+
+\begin{frame}[fragile]{Otros comandos}
+\phantomsection\label{otros-comandos-3}
+Supongamos que tenemos este archivo de texto:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{$}\NormalTok{ cat quijote}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+En un lugar de La Mancha, de cuyo nombre no quiero acordarme,
+no ha mucho tiempo que vivía un hidalgo de los de lanza y adaga,
+adarga antigua, rocín flaco y galgo corredor.
+\end{verbatim}
+
+Puedo buscar la palabra ``\emph{un}'' con
+
+\begin{verbatim}
+$ grep un quijote
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Otros comandos}
+\phantomsection\label{otros-comandos-4}
+\texttt{sort} es un comando que, como su nombre lo indica, ordena los
+contenidos de un archivo e imprime el resultado:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{cat}\NormalTok{ arhivo}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+c
+f
+o
+q
+a
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sort}\NormalTok{ arhivo}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+a
+c
+f
+o
+q
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Otros comandos}
+\phantomsection\label{otros-comandos-5}
+\texttt{sort} tiene algunas opciones muy útiles cuando se quiere ordenar
+un archivo por un criterio distinto al lexicográfico:
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Comando & Significado \\
+\midrule\noalign{}
+\endhead
+\texttt{sort\ -r} & Ordena en orden inverso \\
+\texttt{sort\ -n} & Ordena en orden numérico \\
+\texttt{sort\ -n} & Ordena en orden numérico \\
+\texttt{sort\ -h} & Ordena tamaños (99 K antes de 1 G) \\
+\bottomrule\noalign{}
+\end{longtable}
+\end{frame}
+
+\begin{frame}[fragile]{Otros comandos}
+\phantomsection\label{otros-comandos-6}
+Los comandos \texttt{head} y \texttt{tail} son útiles para mostrar sólo
+la primera o la última parte de un archivo, respectivamente:
+
+\begin{verbatim}
+cat archivo-largo
+Elit aliquid quas ipsa 
+facere 
+facilis sequi 
+similique? 
+Laboriosam 
+iusto ipsam
+...
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{$}\NormalTok{ head }\AttributeTok{{-}n}\NormalTok{ 3 archivo{-}largo}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Elit aliquid quas ipsa 
+facere 
+facilis sequi 
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Directorios}
+\phantomsection\label{directorios}
+En el sistema puede haber muchos archivos con el nombre \texttt{tareas},
+pero no en el mismo lugar.
+
+La manera en la que el S.O. puede distinguir cada uno de los archivos
+llamados \texttt{tareas} es mediante la grupación de archivos dentro de
+\emph{directorios} (carpetas, folders, \ldots)
+\end{frame}
+
+\begin{frame}{Directorios}
+\phantomsection\label{directorios-1}
+Todos los archivos del sistema operativo tienen una organización lógica
+con la forma de un árbol.
+
+Cada nodo de el árbol es un archivo que, en caso de ser un directorio,
+puede a su vez ser la raíz de otro árbol.
+\end{frame}
+
+\begin{frame}{La jerarquía de directorios}
+\phantomsection\label{la-jerarquuxeda-de-directorios}
+\begin{figure}
+\centering
+\includegraphics{img/image_2024-09-05-11-21-06.png}
+\caption{Jerarquía esencial de directorios en un sistema Linux.}
+\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]{Directorios}
+\phantomsection\label{directorios-2}
+Cada usuario real del sistema tiene un directorio personal (casi siempre
+dentro del directorio \texttt{/home}), que contiene todos sus archivos.
+
+Cuando inicias una sesión en la shell (cuando abres la terminal),
+empiezas trabajando dentro de tu directorio personal.
+\end{frame}
+
+\begin{frame}[fragile]{Directorios}
+\phantomsection\label{directorios-3}
+Puedes cambiar el directorio en el que trabajas (\emph{working
+directory}) con el comando \texttt{cd} (\texttt{pwd} es un comando que
+muestra tu \emph{working directory})
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{$}\NormalTok{ pwd}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+/home/paco
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{$}\NormalTok{ cd Downloads}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+/home/paco/Downloads
+\end{verbatim}
+\end{frame}
+
+\begin{frame}{Directorios}
+\phantomsection\label{directorios-4}
+De esta manera, puedes guardar archivos con el mismo nombre pero dentro
+de diferentes directorios para que no haya conflictos.
+\end{frame}
+
+\end{document}
