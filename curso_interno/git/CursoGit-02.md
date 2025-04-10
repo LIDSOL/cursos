@@ -78,11 +78,11 @@ Configura tu nombre de usuario y correo electrónico en Git. Esto es importante 
 
 # Configuración de un Repositorio
 
-![Añadir colaboradores](./img/AñadirColaboradores.png)
+![Añadir colaboradores](./img/AnadirColaboradores.png)
 
 # Configuración de un Repositorio
 
-![Añadir restricciones](./img/AñadirRestricciones.png)
+![Añadir restricciones](./img/AnadirRestricciones.png)
 
 # Configuración de un Repositorio
 
