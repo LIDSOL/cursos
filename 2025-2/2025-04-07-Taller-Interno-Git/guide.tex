@@ -1,0 +1,104 @@
+\documentclass[12pt, letterpaper]{article}
+
+\usepackage[english]{babel} % Sets the language and regional settings for English documents
+\usepackage[utf8]{inputenc} % Allows the use of UTF-8 characters in the document
+\usepackage[T1]{fontenc} % Specifies the font encoding
+\usepackage[margin=2cm]{geometry} % Sets the page margins
+\usepackage{makeidx} % Enables the creation of indexes
+\usepackage{natbib} % Provides flexible bibliography support
+\usepackage{url} % Allows the use of URLs
+\usepackage{enumitem} % Customizes the appearance of lists
+\usepackage{listings} % Provides syntax highlighting for code listings
+\usepackage[dvipsnames]{xcolor} % Allows the use of colors
+\usepackage{parskip} % Modifies paragraph spacing
+\usepackage{graphicx} % Enables the inclusion of graphics
+\usepackage{tikz} % Allows the creation of graphics and diagrams
+\usepackage{float}
+\usepackage{hyperref} % Enables the creation of hyperlinks
+\usepackage{amsmath} % Provides additional math environments and commands
+\usepackage{circuitikz} % Allows the creation of electrical circuits
+\usepackage{adjustbox} % Adjusts the size of the circuit diagrams
+\usepackage{arydshln} % Allows the use of dashed lines in tables
+
+\usetikzlibrary{shapes.geometric, positioning}
+
+\lstset{
+	language=SQL,
+	basicstyle=\ttfamily\small,
+	keywordstyle=\color{blue},
+	commentstyle=\color[rgb]{0,0.5,0},
+	stringstyle=\color{red},
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	stepnumber=1,
+	numbersep=10pt,
+	backgroundcolor=\color{white},
+	showspaces=false,
+	showstringspaces=false,
+	breaklines=true,
+	frame=single,
+	tabsize=2, captionpos=b, lineskip=-1pt,
+	extendedchars=true,
+	literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1 {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1 {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {¿}{{\textquestiondown}}1 {¡}{{\textexclamdown}}1
+}
+
+\graphicspath{ {./img/} } % Sets the path for the graphics
+
+\newlist{biblio}{enumerate}{1}
+\setlist[biblio,1]{label=[\arabic*]}
+
+\makeindex
+
+\begin{document}
+
+\section*{Sistema de control de versiones}
+
+\subsection*{¿Qué es un sistema de control de versiones?}
+
+Un sistema de control de versiones (VCS) es una herramienta que permite gestionar y realizar un seguimiento de los cambios en archivos y proyectos a lo largo del tiempo. Facilita mucho colaboración entre múltiples desarrolladores, permitiendo que trabajen en el mismo proyecto sin conflictos. Sirven para el desarrollo de software, ya que permiten revertir cambios, comparar versiones y mantener un historial completo de modificaciones.
+
+Justo en este curso lo que buscamos en entender como funcionan estos sistemas, pero, con git.
+
+\subsection*{¿Qué es Git?}
+Git es un sistema de control de versiones distribuido, lo que significa que cada desarrollador tiene una copia completa del repositorio en su máquina local.
+
+Esto permite trabajar sin conexión y realizar cambios de manera independiente antes de sincronizar con el repositorio central.
+
+Git es ampliamente utilizado en el desarrollo de software debido a su eficiencia, flexibilidad y capacidad para manejar proyectos grandes y complejos.
+
+Y lo más importante, es software libre y de código abierto.
+
+\section*{Conceptos básicos de Git}
+
+\subsection*{Snapshot}
+Un snapshot en Git es una captura del estado actual de los archivos en un repositorio en un momento específico. Cada vez que realizamos un commit, Git guarda un snapshot de cómo lucen todos los archivos en ese momento. 
+
+\subsection*{Commit}
+Un commit es un registro de los cambios realizados en el repositorio. Cada commit tiene un identificador único (hash) y contiene información sobre los cambios realizados, el autor y la fecha. Los commits permiten rastrear el historial del proyecto y revertir a versiones anteriores si es necesario.
+
+\subsection*{Branch}
+Una branch o rama es una línea de desarrollo independiente dentro de un repositorio. Permite trabajar en diferentes características o correcciones de errores sin afectar la rama principal. Este concepto es principalmente usado para desarrollo colaborativo.
+
+\subsection*{Repositorio}
+Un repositorio es un espacio de almacenamiento donde se guardan todos los archivos y el historial de cambios de un proyecto. Puede ser local (en la máquina del desarrollador) o remoto (en un servidor, como gitlab o github). Git permite clonar, crear y gestionar repositorios de manera eficiente.
+
+\subsection*{Cherry-pick}
+El cherry-pick es una operación en Git que permite aplicar un commit específico de una rama a otra. Esto es útil cuando se desea incorporar un cambio particular sin fusionar toda la rama. Al hacer cherry-pick, Git crea un nuevo commit en la rama de destino con los cambios del commit seleccionado.
+
+\subsection*{Rebase}
+El rebase es una operación en Git que permite mover o combinar commits de una rama a otra. A diferencia del merge, que crea un nuevo commit de fusión, el rebase reescribe el historial de commits, aplicando los cambios de una rama sobre otra.
+
+\subsection*{Rebase onto}
+git rebase --onto es una variante del rebase que permite especificar una nueva base para una serie de commits. Es similar a un cherry pick, pero en lugar de aplicar un solo commit, se pueden mover varios commits a una nueva.
+
+
+% \section{Bibliography}
+
+% \begin{biblio}
+% 	%for: https://www.poli.edu.co/blog/poliverso/diseno-digital-que-es
+% 	\item \textit{Diseño digital: qué es y por qué es importante.} (2021, August 26). Poliverso. Retrieved October 16, 2024, from: \textcolor{blue}{\underline{\url{https://www.poli.edu.co/blog/poliverso/diseno-digital-que-es}}}
+% 	%for: https://www.sky6cancun.com/marketing/diseno-grafico/diseno-digital-que-es-y-para-que-sirve/
+% 	\item \textit{Diseño digital: qué es y para qué sirve.} (2021, August 26). Sky6Cancún. Retrieved October 16, 2024, from: \textcolor{blue}{\underline{\url{https://www.sky6cancun.com/marketing/diseno-grafico/}}}
+% \end{biblio}
+
+\end{document}
