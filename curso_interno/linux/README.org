@@ -1,0 +1,63 @@
+#+TITLE: Linux
+#+AUTHOR: Andrea Saldaña, Francisco Galindo
+#+OPTIONS: H:2 toc:t num:t
+
+
+* Curso de uso básico de Linux
+
+** Objetivo
+
+Obtener uso conocimientos suficientes para que los miembros del LIDSoL
+puedan utilizar una computadora personal con Linux instalado.
+
+Según algunas opiniones, un buen sistema operativo se caracteriza por
+"no estorbar", es decir, que el usuario de la computadora vea al SO
+como una herramienta útil para realizar su computo en lugar de
+considerarlo un obstáculo.
+
+Los temas a tocar son los siguientes.
+
+- Fundamentos
+  - ¿Qué es Linux?
+  - ¿Qué es la ~shell~?
+  - La estructura básica de un comando en la ~shell~
+  - El sistema de archivos
+    - Todo es un archivo
+    - Trabajando con archivos en la ~shell~ (creación, edición)
+    - La jerarquía de directorios
+  - Usuarios y permisos
+    - ¿Qué son los usuarios en Linux?
+    - Gestión de usuarios
+    - ¿Qué son los permisos?
+    - Gestión de permisos con la ~shell~
+    - Ejecutando comandos como el usuario ~root~ (~sudo~)
+  - Procesos
+- Instalando software
+  - El gestor de paquetes (¿qué es un paquete?)
+  - Gestor de paquetes nativo (~apt~, ~dnf~, ~pacman~, ...)
+  - El gestor de paquetes Flatpak
+  - Descargando paquetes directamente del distribuidor
+  - Compilando programas desde código fuente
+  - Otros gestores de paquetes (mencion de ~pip~, ~node~, ...)
+- La ~shell~
+  - Las diferentes ~shells~ ()
+  - ~stdin~ y ~stdout~
+  - Popurrí de comandos
+  - Redirección de entrada y salida
+  - Pipes, pipelines
+  - Creación de scripts básicos
+  - Programas de manipulación de texto (~sed~, ~awk~)
+  - Estructuras de control
+- Configurando programas, obteniendo información
+  - Viendo los contenidos de ~/etc~.
+  - Páginas de manual (~man~)
+  - Buscando en internet (¿qué pregunto?)
+- Creando un ambiente de desarrollo
+  - Instalando las herramientas necesarias para un proyecto dado
+  - Aprendiendo a usar la toolchain de un lenguaje de programación
+- Uso básico de contenedores (con ~podman~ o Docker)
+  - ¿Qué son los contenedores, ~podamn~ y Docker?
+  - Utilidad de los contenedores
+  - Descargando una imagen de contenedor
+  - Iniciando contenedores, configurando conexiones a red
+  - Gestión básica de contenedores (creación, eliminación, exportación)
