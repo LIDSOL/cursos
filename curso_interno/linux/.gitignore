@@ -17,3 +17,4 @@
 *.synctex.gz
 *~undo-tree~
 *org~
+!preamble.tex
