@@ -1,6 +1,6 @@
 #+TITLE: Linux
 #+AUTHOR: Andrea Saldaña, Francisco Galindo
-#+OPTIONS: H:2 toc:t num:t
+#+OPTIONS: H:2 toc:nil num:nil
 
 
 * Curso de uso básico de Linux
