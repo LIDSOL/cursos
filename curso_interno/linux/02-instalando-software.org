@@ -1,0 +1,11 @@
+#+TITLE: Curso interno de Linux
+#+SUBTITLE: Conceptos fundamentales
+#+AUTHOR: Andrea Saldaña, Francisco Galindo
+#+EMAIL: saldanan.andrea.p8@gmail.com, contact@franciscogalindo.com
+#+OPTIONS: H:2 toc:nil num:nil
+#+LATEX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [presentation,aspectratio=169]
+#+LATEX_HEADER: \input{./preamble.tex}
+#+LANGUAGE: es
+#+LATEX_HEADER: \usepackage[spanish]{babel}
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col)

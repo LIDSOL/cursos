@@ -1,0 +1,20 @@
+*.tex
+# Ignore all auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
+*.maf
+*.mtc
+*.mtc1
+*.synctex.gz
+*~undo-tree~
+*org~
+!preamble.tex
