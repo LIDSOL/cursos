@@ -28,7 +28,8 @@ asistentes obtengan un panorama general del área con un enfoque en la
 resolución práctica de problemas que involucren procesamiento del
 lenguaje (principalmente textual).
 
-**NOTA: Este no es un curso introductorio, nos vamo' a ir hata'bajo 🔥**
+> [!Important]
+> Este no es un curso introductorio, nos vamo' a ir hata'bajo 🔥
 
 ## Pre-requisitos
 
@@ -48,7 +49,10 @@ un entorno de computación interactiva de código.
 
 ## Temario
 
-### 1. El lenguaje natural, la Inteligencia artificial y los niveles lingüísticoso
+> [!NOTE]
+> Este curso está basado en las notas de las clases dictadas por læs profesoræs [Dra. Ximena Gutierrez-Vasques](https://sites.google.com/site/xgutierrezv/home) y [Dr. Victor Mijangos](https://sites.google.com/site/victormijangoscruz/) referentes del área en la UNAM.
+
+### 1. El lenguaje natural, la Inteligencia artificial y los niveles lingüísticos
 
 - ¿Como se procesa el lenguaje natural en una computadora?
 - Niveles del lenguaje
@@ -62,9 +66,9 @@ un entorno de computación interactiva de código.
 ### 2. Propiedades estadísticas del lenguaje y los modelos del lenguaje
 
 - Propiedades estadísticas del lenguaje natural
-- Representaciones vectoriales, enfoques clásicos 
+- Representaciones vectoriales, enfoques clásicos
 - Modelos del lenguaje estadísticos
-- Técnicas de pre-procesamiento y normalización de textos: subword tokenization
+- Técnicas de pre-procesamiento y normalización de textos: *subword tokenization*
 
 ### 3. Procesamiento del lenguaje natural: Un enfoque moderno (neuronal)
 
@@ -79,3 +83,8 @@ un entorno de computación interactiva de código.
 - Transfer learning y fine-tuning
 - Retrieval-augmented generation (RAG)
 - LLMs locales con `ollama`
+
+## Bibliografía
+
+- Dan Jurafsky y James H. Martin. [Speech and Language Processing (2025 pre-release)](https://web.stanford.edu/~jurafsky/slp3/)
+- Víctor Mijangos. [Fundamentos de Lingüística computacional (2025 pre-release)](TODO)
