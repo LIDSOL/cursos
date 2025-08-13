@@ -1,0 +1,140 @@
+* Temario
+** Parte 1
+*** Introducción e historia
+- UNIX
+- GNU
+- Linux
+- Software Libre vs Open Source
+*** Distribuciones disponibles
+En esta sección se abordara el gran abanico de posibilidades. Se presentaran algunas de las distribuciones más conocidas. Evidentemente no se profundizará en ellas (gestión de paquetes, por ejemplo), se hablará sobre generalidades
+- Arch
+  - Manjaro
+- Debian
+  - Mint
+  - Ubuntu
+- Red Hat
+  - Fedora
+  - Centos
+- Gentoo
+- Bedrock Linux
+*** Instalación de un entorno Linux
+** Parte 2 y 3
+*** La interfaz de Gnome
+Uso básico del entorno de escritorio GNOME.
+- Cajon de aplicaciones
+- Workspaces
+- Dock
+- QuickSettings
+- Busqueda
+- Nautilus
+**** Otros entornos de escritorios
+Se hará una breve mención sobre KDE, XFCE, así como de WM como sway o hyprland.
+*** Directorios
+**** Comandos básicos
+Manejo básico de directorios, crearlos, eliminarlos, moverse entre ellos, listarlos.
+- pwd
+- ls
+- cd
+- mkdir
+- rmdir
+- mv
+- cp
+**** Jerarquía de directorios
+Se expondrá el papel e importancia que tiene cada directorio del sistema Linux.
+- /
+- /bin
+- /boot
+- /dev
+- /home
+- /lib
+- /mnt
+- /opt
+- /run
+- /root
+- /sbin
+- /srv
+- /tmp
+- /proc
+- /usr
+- /var
+*** Archivos
+**** Comandos básicos
+Se expondrá el manejo básico de archivos, creación, borrar, modificación, imprir el contenido de un archivo.
+- touch
+- cat
+- less
+- cp
+- mv
+- rm
+**** Editor de texto
+Se expondrá como modificar el contenido de un archivo (navegación, guardar, salir, modos, busqueda) con dos de los editores más usados.
+- nano/micro
+- vim/neovim
+**** Sistema de archivos y almacenamiento
+***** Sistemas de archivos de Linux
+- ext4
+- btrfs
+- XFS
+- FAT32
+***** Creación de un sistema de archivos
+- mkfs
+****** Partición de un disco
+- cfdisk
+****** Luksformat
+****** fstab
+***** Montaje y desmontaje de dispositivos de almacenamiento
+- mount
+- umount
+*** Otros
+Estandar de entrada y salida. Manipular la salida de un comando, redirección de salidas, busqueda de texto, etc. Utilidades.
+- tree
+- stdout
+- stdin
+- stderr
+- pipeline
+- sort
+- uniq
+- grep
+- htop
+- neofetch
+*** Usuarios
+- Creación de usuarios (useradd)
+- Cambiar la contraseña de un usuario (passwd)
+- root
+- grupos
+- /etc/sudoers
+*** Permisos
+- Permisos de los archivos (d | rwx | r-x | r-x )
+- Modificar permisos (chmod)
+*** Procesos
+- Creación de procesos
+- Terminar y matar procesos
+- Tareas cron
+- Demonios
+- Crear un demonio (systemd)
+- Detener un demonio (systemd)
+- Reiniciar un demonio (systemd)
+*** Paquetes
+- Actualizar paquetes
+- Búsqueda de paquetes
+- Instalación de paquetes
+- Borrar paquetes
+- Mirros
+**** Flatpak
+*** Bashscript básico
+- Shebang
+- Ejecutar un script de bash
+- Comentarios
+- Variables
+- Echo
+- If/else
+- Bucles
+- Entrada y salida
+- Función
+*** Git Básico
+- Git History
+- Git branchs
+- Git Tagging
+- Git Push, Commit, Ignore, Add.
+** Parte 4
+Ejercicio práctico. Se resolverán los desafios de la página https://overthewire.org/wargames/bandit/ para poner en práctica lo expuesto en las primeras tres sesiones y abordar ssh.
